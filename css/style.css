@@ -360,6 +360,7 @@ a {
 
 .page {
   max-width: 1200px;
+  box-sizing: border-box;
   padding: 0 15px;
   margin: 61px auto 0 auto;
 
@@ -368,7 +369,7 @@ a {
 }
 
 .articles-group {
-  max-width: 778px;
+  width: calc(100% - 272px - 122px);
   flex-grow: 1;
 }
 
@@ -382,7 +383,7 @@ a {
 }
 
 .article-image {
-  max-width: 381px;
+  min-width: 381px;
   object-fit: cover;
   background-color: #eff5f1;
   margin-right: 26px;
@@ -440,6 +441,7 @@ a {
 
 .aside {
   width: 272px;
+  margin-left: 122px;
 }
 
 .aside-header {
@@ -457,7 +459,9 @@ a {
   background-color: #b59f5b;
   opacity: 40%;
   bottom: 0;
-  left: 103px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .aside-title {
@@ -690,7 +694,7 @@ a {
 
 .shop-group {
   display: flex;
-  max-width: 1170px;
+  max-width: 1200px;
   justify-content: space-between;
   margin-top: 29px;
   margin-bottom: 75px;
@@ -706,13 +710,13 @@ a {
 }
 
 .shop-image {
-  min-width: 300;
+  width: 100%;
   background-color: #eff6f1;
   object-fit: cover;
 }
 
 .shop-wrapper {
-  min-width: 300px;
+  width: 100%;
   box-sizing: border-box;
   outline: 3px solid #b59f5b;
   outline-offset: 20px;
@@ -875,11 +879,10 @@ a {
   .page {
     max-width: 1199px;
     padding: 0 35px;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .articles-group {
-    width: calc(100% - 272px - 37px);
     flex-grow: 1;
   }
 
@@ -892,14 +895,15 @@ a {
   .article:nth-child(n + 2):after {
     content: " ";
     position: absolute;
-    min-width: 392px;
+    width: 100%;
     height: 3px;
     background-color: #eeeeee;
     top: -42px;
   }
 
   .article-image {
-    max-width: 392px;
+    width: 100%;
+    min-width: 100px;
     margin-right: 0;
     margin-bottom: 16px;
   }
@@ -908,12 +912,14 @@ a {
     font-size: 17px;
   }
 
-  .article-header {
-    max-width: 392px;
+  .article-content {
+    max-width: 100%;
+    margin-top: 33px;
   }
 
-  .article-content {
-    margin-top: 33px;
+  .aside {
+    width: 272px;
+    margin-left: 35px;
   }
 
   .shop {
@@ -931,7 +937,7 @@ a {
   }
 
   .shop-article:nth-child(n + 3) {
-    margin-top: 23px;
+    margin-top: 28px;
   }
 
   .shop-article-title {
@@ -939,11 +945,11 @@ a {
   }
 
   .shop-image {
-    min-width: 292px;
+    width: 100%;
   }
 
   .shop-wrapper {
-    min-width: 292px;
+    min-width: 222px;
   }
 }
 
@@ -1047,15 +1053,17 @@ a {
   .article:nth-child(n + 2):after {
     content: " ";
     position: absolute;
-    min-width: 330px;
+    width: 100%;
     height: 3px;
     background-color: #eeeeee;
     top: -42px;
   }
 
   .article-image {
-    max-width: 330px;
+    width: 100%;
+    min-width: 100px;
     margin-right: 0;
+    margin-bottom: 16px;
   }
 
   .article-name {
@@ -1064,17 +1072,18 @@ a {
   }
 
   .article-header {
-    max-width: 328px;
+    width: 100%;
   }
 
   .article-content {
     font-size: 14px;
-    max-width: 328px;
+    max-width: 100%;
     margin-top: 23px;
   }
 
   .aside {
-    width: 330px;
+    width: 100%;
+    margin-left: 0;
   }
 
   .posts-content {
